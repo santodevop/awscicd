@@ -2,4 +2,4 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi container is stopping"
+echo "Hi container is stopping "
