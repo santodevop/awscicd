@@ -1,16 +1,13 @@
 version: 0.0
 os: linux
 
-files:
-  - source: scripts/
-    destination: /opt/scripts/
     
 hooks:
   ApplicationStop:
-    - location: /opt/scripts/stop_container.sh
+    - location: scripts/stop_container.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: /opt/scripts/start_container.sh
+    - location: scripts/start_container.sh
       timeout: 300
       runas: root
